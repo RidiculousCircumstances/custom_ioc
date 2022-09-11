@@ -1,0 +1,28 @@
+{
+  "name": "constructor_ioc",
+  "version": "0.0.1",
+  "description": "This package allows to use IoC with DI by token to class binding",
+  "main": "ioc.js",
+  "scripts": {
+    "dev": "tsc & node ./dist/src/main.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "RidiculousCircumstances",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RidiculousCircumstances/custom_ioc.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+  "@types/uuid": "^8.3.4",
+  "ts-node": "^10.9.1",
+  "@types/jest": "^29.0.0",
+  "jest": "^29.0.2",
+  "ts-jest": "^28.0.8"
+  }
+}
