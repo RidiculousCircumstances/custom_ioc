@@ -3,7 +3,7 @@ A lightweight library for fast dependency injection to your project.
 
 ---
 
-##Basic features
+## Basic features
 
 To start using IoC Container just import it:
 ```
@@ -65,7 +65,7 @@ Container.unbind(Service2Token);
 
 This will remove bound pair as well as the existing instance.
 
-##Specifying the scope of a class instance
+## Specifying the scope of a class instance
 
 You can specify in which scope an class instance will be used. There are two scopes: "singleton" and "common". This is specified at the token-class binding step:
 ```
