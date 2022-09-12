@@ -1,6 +1,6 @@
 {
   "name": "inversion-tools",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This package allows to use IoC with DI by token to class binding",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
