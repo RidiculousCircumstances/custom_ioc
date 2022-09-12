@@ -23,7 +23,7 @@ export function Injectable() {
 	};
 }
 
-export function Inject(token: string | symbol) {//готов!
+export function Inject(token: string | symbol) {
 	return function (target: Object, propertyKey: string | symbol, parameterIndex: number) {
 		const tokenWithPosition = token;
 		
