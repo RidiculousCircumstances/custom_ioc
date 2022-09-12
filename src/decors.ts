@@ -2,9 +2,9 @@ import 'reflect-metadata';
 import { v4 } from 'uuid';
 
 export function Injectable() {
-  return function (target: Function) {
+  return function (target: Function): void {
     const deps = Reflect.getMetadataKeys(target);
-    let tokens: Array<symbol> = [];
+    const tokens: Array<symbol> = [];
     for (const dep of deps) {
       const token = Reflect.getMetadata(dep, target);
       tokens.push(token);
@@ -22,7 +22,7 @@ export function Injectable() {
 }
 
 export function Inject(token: string | symbol) {
-  return function (target: Object, propertyKey: string | symbol, parameterIndex: number) {
+  return function (target: Object, propertyKey: string | symbol, parameterIndex: number): void {
     const tokenWithPosition = token;
 
     Reflect.defineMetadata(String(v4()), tokenWithPosition, target);

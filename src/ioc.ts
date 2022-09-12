@@ -14,12 +14,12 @@ export class Container {
     token: string | symbol,
     classToInject: Newable<T>,
     scope: 'singleton' | 'common' = 'singleton',
-  ) {
+  ): void {
     Reflect.defineMetadata('scope', scope, classToInject);
     Container.bindingMap.set(token, classToInject);
   }
 
-  static unbind(token: string | symbol) {
+  static unbind(token: string | symbol): void {
     if (Container.bindingMap.has(token)) {
       Container.bindingMap.delete(token);
 
